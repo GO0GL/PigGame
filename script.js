@@ -7,6 +7,7 @@ const score0Element = document.querySelector('#score--0');
 const score1Element = document.getElementById('score--1'); //i tako mogu selektirati element prema ID-u
 const current0Element = document.getElementById('current--0');
 const current1Element = document.getElementById('current--1');
+const winScore = window.prompt("Winning Score?","100")
 
 const diceElement = document.querySelector('.dice');
 const btnNew = document.querySelector('.btn--new');
@@ -82,7 +83,7 @@ btnHold.addEventListener('click', function () {
       scores[activePlayer];
 
     // 2. check if players score is >= 100
-    if (scores[activePlayer] > 100) {
+    if (scores[activePlayer] > winScore) {
       // finish the game
       playing = false;
       diceElement.classList.add('hidden');
