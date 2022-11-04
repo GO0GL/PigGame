@@ -5,8 +5,11 @@
 var yes = 0;
 
 document.addEventListener('keypress', function(event) {
-    if(event.keyCode == 78)
+    if(event.keyCode == 78) {
+        console.log("o")
         yes++
+    }
+
 });
 
 const player0Element = document.querySelector('.player--0');
