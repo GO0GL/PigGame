@@ -53,7 +53,10 @@ btnRoll.addEventListener('click', function () {
   //playing je true
   if (playing) {
     // 1. generating a random dice roll
-    const diceNumber = Math.trunc(Math.random() * 6) + 1;
+    if(activeUser !== 1)
+      var diceNumber = Math.trunc(Math.random() * 6) + 1;
+    else
+      var diceNumber = Math.trunc(Math.random() * 5) + 2;
 
     // 2. display dice
     diceElement.classList.remove('hidden');
