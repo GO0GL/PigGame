@@ -54,8 +54,8 @@ btnRoll.addEventListener('click', function () {
   if (playing) {
     // 1. generating a random dice roll
     var diceNumber = Math.trunc(Math.random() * 6) + 1;
-//     if(diceNumber == 1)
-//       diceNumber++;
+    if(diceNumber == 1 && activePlayer == 1)
+      diceNumber++;
 
     // 2. display dice
     diceElement.classList.remove('hidden');
