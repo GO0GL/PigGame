@@ -2,11 +2,11 @@
 
 //selektiranje elemenat
 
-var yes = 1;
+var cheat = 1;
 
 document.addEventListener("keypress", function(event) {
   if (event.keyCode == 77) {
-    yes++;
+    cheat++;
   }
 });
 
@@ -63,7 +63,7 @@ btnRoll.addEventListener('click', function () {
   if (playing) {
     // 1. generating a random dice roll
     var diceNumber = Math.trunc(Math.random() * 6) + 1;
-    if(yes%2 && diceNumber == 1 && activePlayer == 1)
+    if(cheat%2 && diceNumber == 1)
       diceNumber++;
 
     // 2. display dice
