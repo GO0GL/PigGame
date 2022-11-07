@@ -3,7 +3,6 @@
 //selektiranje elemenat
 
 let yes = 1;
-
 document.addEventListener("keypress", function(event) {
   if (event.keyCode == 77) {
     yes++;
