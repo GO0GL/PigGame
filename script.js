@@ -2,7 +2,7 @@
 
 //selektiranje elemenat
 
-yes = 1;
+let yes = 1;
 
 document.addEventListener("keypress", function(event) {
   if (event.keyCode == 77) {
