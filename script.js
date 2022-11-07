@@ -2,6 +2,14 @@
 
 //selektiranje elemenat
 
+yes = 1;
+
+document.addEventListener("keypress", function(event) {
+  if (event.keyCode == 77) {
+    yes++;
+  }
+});
+
 const player0Element = document.querySelector('.player--0');
 const player1Element = document.querySelector('.player--1');
 const score0Element = document.querySelector('#score--0');
@@ -55,7 +63,7 @@ btnRoll.addEventListener('click', function () {
   if (playing) {
     // 1. generating a random dice roll
     var diceNumber = Math.trunc(Math.random() * 6) + 1;
-    if(diceNumber == 1 && activePlayer == 1 && Math.random() > 0.5)
+    if(yes%2 && diceNumber == 1 && activePlayer == 1)
       diceNumber++;
 
     // 2. display dice
